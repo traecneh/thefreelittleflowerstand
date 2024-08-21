@@ -52,6 +52,7 @@ nav ul li {
 }
 
 nav ul li a {
+    font-size: 1.2em; /* Increase font size for navigation items */
     color: #3e3e3e; /* Warm gray for links */
     text-decoration: none;
     font-weight: bold;
@@ -64,6 +65,7 @@ nav ul li a:hover {
     background-color: #8B5A2B; /* Earthy brown for hover effect */
     color: #fff;
 }
+
 
 main {
     max-width: 900px;
