@@ -1,103 +1,105 @@
 /* General styles */
 body {
-    font-family: 'Merriweather', serif;
-    background-color: #fdf6f0; /* Soft, warm background color */
-    color: #4a4a4a; /* Gentle dark gray for text */
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff; /* Clean white background */
+    color: #333333; /* Dark gray for text */
     margin: 0;
     padding: 0;
     line-height: 1.6;
 }
 
 header {
-    background-color: #f7e8d4; /* Light peachy color to represent warmth */
-    color: #2d2d2d;
+    background-color: #e8f5e9; /* Light green inspired by leaves */
+    color: #1b5e20; /* Dark green for contrast */
     text-align: center;
     padding: 2em 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #c8e6c9;
 }
 
 header h1 {
-    font-family: 'Great Vibes', cursive; /* Elegant, flowing font for the title */
-    font-size: 3em;
+    font-family: 'Playfair Display', serif; /* Elegant, modern serif font */
+    font-size: 2.5em;
     margin: 0;
+    font-weight: bold;
+    color: #1b5e20;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
-    margin: 1em 0 0 0;
+    margin: 20px 0 0;
     display: flex;
     justify-content: center;
-    background-color: #d3c0a7; /* Muted color for contrast with header */
+    border-bottom: 1px solid #e0e0e0; /* Subtle border for a clean look */
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
-    color: #2d2d2d;
+    color: #1b5e20;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
     padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: #f4e3cf;
+    color: #388e3c; /* Slightly darker green on hover */
 }
 
 main {
-    max-width: 800px;
-    margin: 30px auto;
+    max-width: 1000px;
+    margin: 40px auto;
     padding: 0 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .post {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     padding-bottom: 30px;
-    border-bottom: 2px solid #e8ded4;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .post h3 {
-    color: #7a4b2b; /* Rich brown to evoke the earth and natural elements */
-    font-family: 'Merriweather', serif;
-    font-size: 1.8em;
+    color: #2e7d32; /* Fresh, vibrant green */
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    margin-bottom: 15px;
 }
 
 .post p {
     margin: 10px 0;
+    color: #616161;
 }
 
 .post a {
-    color: #a05a2c; /* Warm, inviting color for links */
+    color: #388e3c; /* Modern green for links */
     text-decoration: none;
-    border-bottom: 1px dashed #a05a2c;
-    transition: color 0.3s ease;
+    border-bottom: 2px solid #388e3c;
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
 }
 
 .post a:hover {
-    color: #7a4b2b;
+    color: #2e7d32;
+    border-bottom-color: transparent;
 }
 
 img, video {
     max-width: 100%;
     height: auto;
     margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Rounded corners for a modern touch */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
 
 footer {
     text-align: center;
     padding: 20px 0;
-    background-color: #d3c0a7;
-    color: #4a4a4a;
+    background-color: #f1f8e9; /* Light background color for footer */
+    color: #1b5e20;
     margin-top: 40px;
+    border-top: 2px solid #c8e6c9;
 }
 
 /* Responsive styles */
