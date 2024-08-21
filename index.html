@@ -12,7 +12,6 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#past-posts">Past Arrangements</a></li>
                 <li><a href="donate.html">Donate Vases</a></li>
                 <li><a href="about.html">About Us</a></li>
             </ul>
@@ -20,20 +19,8 @@
     </header>
 
     <main>
-        <section id="latest-post">
-            <h2>Latest Arrangement</h2>
-            <p>Check out our most recent flower arrangement! Below you'll find a little blurb about <a href="#tips">Tips for Flower Care</a>.</p>
-            <!-- Latest post will be loaded here by JavaScript -->
-        </section>
-
-        <section id="tips">
-            <h2>Tips for Flower Care</h2>
-            <p>Here you can include some general tips for keeping flowers fresh longer, like trimming stems, changing water daily, etc.</p>
-        </section>
-
-        <section id="past-posts">
-            <h2>Past Arrangements</h2>
-            <!-- Past posts will be loaded here by JavaScript -->
+        <section id="arrangements">
+            <!-- All posts will be loaded here by JavaScript -->
         </section>
     </main>
 
@@ -43,15 +30,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const latestPost = {
-                title: "August 20, 2024 - Fresh Roses and Daisies",
-                date: "August 20, 2024",
-                content: "Today we put out a beautiful arrangement of fresh roses and daisies. The colors were vibrant and the fragrance was lovely!",
-                images: ["images/roses-daisies-1.jpg", "images/roses-daisies-2.jpg"],
-                videos: ["videos/roses-daisies.mp4"]
-            };
-
-            const pastPosts = [
+            const posts = [
                 {
                     title: "August 20, 2024 - Fresh Roses and Daisies",
                     date: "August 20, 2024",
@@ -67,6 +46,14 @@
                     images: ["images/sunflowers-1.jpg", "images/sunflowers-2.jpg"],
                     videos: [],
                     link: "posts/2024-08-15.html"
+                },
+                {
+                    title: "July 15, 2024 - Summer Garden Mix",
+                    date: "July 15, 2024",
+                    content: "This week, we put together a lovely mix of summer garden flowers, including zinnias, marigolds, and lavender. The vibrant colors and fresh scent made this bouquet a favorite among those who passed by.",
+                    images: ["images/summer-garden-1.jpg", "images/summer-garden-2.jpg"],
+                    videos: [],
+                    link: "posts/2024-07-15.html"
                 }
             ];
 
@@ -93,26 +80,16 @@
                 return mediaHTML;
             }
 
-            // Load latest post
-            const latestPostSection = document.getElementById('latest-post');
-            latestPostSection.innerHTML += `
-                <div class="post">
-                    <h3>${latestPost.title}</h3>
-                    <p><strong>Date:</strong> ${latestPost.date}</p>
-                    <p>${latestPost.content}</p>
-                    ${generateMediaHTML(latestPost.images, latestPost.videos)}
-                </div>
-            `;
-
-            // Load past posts
-            const pastPostsSection = document.getElementById('past-posts');
-            pastPosts.forEach(post => {
-                pastPostsSection.innerHTML += `
+            // Load all posts in chronological order
+            const arrangementsSection = document.getElementById('arrangements');
+            posts.forEach(post => {
+                arrangementsSection.innerHTML += `
                     <div class="post">
-                        <h3><a href="${post.link}">${post.title}</a></h3>
+                        <h3>${post.title}</h3>
                         <p><strong>Date:</strong> ${post.date}</p>
                         <p>${post.content}</p>
                         ${generateMediaHTML(post.images, post.videos)}
+                        <p><a href="${post.link}">Read more</a></p>
                     </div>
                 `;
             });
