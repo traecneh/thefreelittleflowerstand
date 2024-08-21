@@ -29,6 +29,7 @@ header h1 {
     font-size: 1em; /* Smaller font size */
     margin-top: 10px; /* Add some space above the statement */
     color: #3e3e3e; /* Warm gray color for text */
+    text-align: center; /* Center the text */
 }
 
 nav {
@@ -144,6 +145,10 @@ footer {
     footer {
         padding: 20px 0;
     }
+
+    .mission-statement {
+        font-size: 1em; /* Ensure consistency across mobile views */
+    }
 }
 
 @media (max-width: 480px) {
@@ -166,5 +171,9 @@ footer {
 
     footer {
         padding: 15px 0;
+    }
+
+    .mission-statement {
+        font-size: 1em; /* Ensure consistency across smaller mobile views */
     }
 }
