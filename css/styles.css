@@ -2,7 +2,7 @@
 body {
     font-family: 'Roboto', sans-serif; /* Clean, modern font for general text */
     background-color: #faf3e0; /* Fallback color */
-    background-image: url('/test.jpg'); /* Replace with your image path */
+    background-image: url('test.jpg'); /* Replace with your image path */
     background-size: cover; /* Cover the entire background */
     background-attachment: fixed; /* Keeps the image fixed in place */
     background-position: center; /* Centers the image */
