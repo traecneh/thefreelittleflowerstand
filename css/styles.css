@@ -1,6 +1,6 @@
 /* General styles */
 body {
-    font-family: 'Cormorant Garamond', serif; /* Elegant, classic serif font */
+    font-family: 'Dancing Script', cursive;
     background-color: #faf3e0; /* Soft, creamy background */
     color: #3e3e3e; /* Deep, warm gray for text */
     margin: 0;
@@ -18,7 +18,7 @@ header {
 }
 
 header h1 {
-    font-family: 'Great Vibes', cursive; /* Flowing, handwritten font */
+    font-family: 'Lobster', cursive; /* Elegant, bold cursive font */
     font-size: 3em;
     margin: 0;
     color: #ffffff;
@@ -71,7 +71,7 @@ main {
 
 .post h3 {
     color: #b05e27; /* Rich, warm brown */
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Lobster', cursive; /* Elegant cursive font */
     font-size: 2.5em;
     margin-bottom: 20px;
 }
@@ -156,43 +156,3 @@ footer {
         padding: 15px 0;
     }
 }
-
-/* Modal styles */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 1000; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
-}
-
-.modal-content {
-    background-color: #fff;
-    margin: 10% auto; /* 10% from the top and centered */
-    padding: 20px;
-    border: 1px solid #e0e0e0;
-    width: 80%;
-    max-width: 600px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    position: relative;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
