@@ -56,7 +56,7 @@ nav ul li {
 
 nav ul li a {
     font-family: 'Verdana', 'Arial', sans-serif; /* Update navigation font to Verdana */
-    font-size: 1.8em; /* Increase font size for navigation items */
+    font-size: 1.5em; /* Increase font size for navigation items */
     color: #3e3e3e; /* Warm gray for links */
     text-decoration: none;
     font-weight: bold;
@@ -64,6 +64,7 @@ nav ul li a {
     border-radius: 20px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 
 nav ul li a:hover {
     background-color: #8B5A2B; /* Earthy brown for hover effect */
