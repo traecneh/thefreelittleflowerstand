@@ -17,19 +17,23 @@ header {
     border-bottom: 2px solid #8B5A2B; /* Warm earthy brown border */
 }
 
+.header-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0; /* Remove rounded corners */
+    box-shadow: none; /* Remove any shadow */
+    border: none; /* Ensure no border is applied */
+    background-color: transparent; /* Ensure the background is transparent */
+}
+
+
 header h1 {
     font-family: 'Dancing Script', cursive; /* Elegant, flowing cursive font */
     font-size: 3em;
     margin: 0;
     color: #000000; /* Black for better contrast */
-}
-
-.mission-statement {
-    font-family: 'Roboto', sans-serif; /* Clean, modern font */
-    font-size: 1em; /* Smaller font size */
-    margin-top: 10px; /* Add some space above the statement */
-    color: #3e3e3e; /* Warm gray color for text */
-    text-align: center; /* Center the text */
 }
 
 nav {
