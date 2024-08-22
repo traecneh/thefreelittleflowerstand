@@ -1,6 +1,6 @@
 /* General styles */
 body {
-    font-family: 'Roboto', sans-serif; /* Clean, modern font for general text */
+    font-family: 'Verdana', 'Arial', sans-serif; /* Default font: Verdana, Fallback: Arial */
     background-color: #faf3e0; /* Soft, creamy background */
     color: #3e3e3e; /* Deep, warm gray for text */
     margin: 0;
@@ -28,9 +28,8 @@ header {
     background-color: transparent; /* Ensure the background is transparent */
 }
 
-
 header h1 {
-    font-family: 'Dancing Script', cursive; /* Elegant, flowing cursive font */
+    font-family: 'Verdana', 'Arial', sans-serif; /* Update header font to Verdana */
     font-size: 3em;
     margin: 0;
     color: #000000; /* Black for better contrast */
@@ -56,7 +55,8 @@ nav ul li {
 }
 
 nav ul li a {
-    font-size: 1.2em; /* Increase font size for navigation items */
+    font-family: 'Verdana', 'Arial', sans-serif; /* Update navigation font to Verdana */
+    font-size: 1.8em; /* Increase font size for navigation items */
     color: #3e3e3e; /* Warm gray for links */
     text-decoration: none;
     font-weight: bold;
@@ -69,7 +69,6 @@ nav ul li a:hover {
     background-color: #8B5A2B; /* Earthy brown for hover effect */
     color: #fff;
 }
-
 
 main {
     max-width: 900px;
@@ -90,12 +89,14 @@ main {
 }
 
 .post h3 {
+    font-family: 'Verdana', 'Arial', sans-serif; /* Update post header font to Verdana */
     color: #8B5A2B; /* Warm earthy brown */
     font-size: 2.5em;
     margin-bottom: 20px;
 }
 
 .post p {
+    font-family: 'Verdana', 'Arial', sans-serif; /* Update post paragraph font to Verdana */
     margin: 15px 0;
     color: #5e5e5e; /* Medium gray for a softer contrast */
 }
@@ -151,10 +152,6 @@ footer {
     footer {
         padding: 20px 0;
     }
-
-    .mission-statement {
-        font-size: 1em; /* Ensure consistency across mobile views */
-    }
 }
 
 @media (max-width: 480px) {
@@ -177,10 +174,6 @@ footer {
 
     footer {
         padding: 15px 0;
-    }
-
-    .mission-statement {
-        font-size: 1em; /* Ensure consistency across smaller mobile views */
     }
 }
 
@@ -208,5 +201,3 @@ footer {
         transform: scale(1.6); /* Pulses up to 20% larger */
     }
 }
-
-
