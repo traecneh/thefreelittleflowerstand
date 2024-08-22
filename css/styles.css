@@ -183,3 +183,30 @@ footer {
         font-size: 1em; /* Ensure consistency across smaller mobile views */
     }
 }
+
+.social-icons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between the icons */
+}
+
+.social-icons a {
+    color: #8B5A2B;
+    font-size: 1.5em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #000000;
+    transform: scale(1.1); /* Grows by 10% on hover */
+    animation: pulse 0.6s infinite alternate; /* Adds a pulsing effect */
+}
+
+@keyframes pulse {
+    to {
+        transform: scale(1.6); /* Pulses up to 20% larger */
+    }
+}
+
+
