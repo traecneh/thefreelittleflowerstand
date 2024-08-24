@@ -1,6 +1,6 @@
 /* General styles */
 body {
-    font-family: 'Verdana', 'Arial', sans-serif; /* Default font: Verdana, Fallback: Arial */
+    font-family: Verdana, Arial, sans-serif; /* Default font */
     background-color: #faf3e0; /* Soft, creamy background */
     color: #3e3e3e; /* Deep, warm gray for text */
     margin: 0;
@@ -48,8 +48,7 @@ nav ul li {
 }
 
 nav ul li a {
-    font-family: 'Verdana', 'Arial', sans-serif; /* Update navigation font to Verdana */
-    font-size: 1.5em; /* Increase font size for navigation items */
+    font-size: 1.2em; /* Increase font size for navigation items */
     color: #3e3e3e; /* Warm gray for links */
     text-decoration: none;
     font-weight: bold;
@@ -75,44 +74,21 @@ main {
     z-index: 2;
 }
 
-#arrangements {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Space between posts */
-}
-
 .post {
-    padding: 15px;
-    border: 1px solid #f0d1b0; /* Lighter, textured border */
-    border-radius: 10px;
-    background-color: #ffffff;
-    transition: background-color 0.3s ease;
+    margin-bottom: 50px;
+    padding-bottom: 40px;
+    border-bottom: 2px solid #f0d1b0; /* Lighter, textured border */
 }
 
 .post h3 {
-    margin-bottom: 10px;
+    color: #8B5A2B; /* Warm earthy brown */
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
-.post:hover {
-    background-color: #f5f5dc; /* Light beige background on hover */
-}
-
-.thumbnail {
-    max-width: 200px;
-    max-height: 150px;
-    margin: 10px 0;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    border-radius: 5px;
-}
-
-.thumbnail:hover {
-    transform: scale(1.1); /* Slightly enlarge the thumbnail on hover */
-}
-
-.fullsize {
-    max-width: 100%;
-    height: auto;
+.post p {
+    margin: 15px 0;
+    color: #5e5e5e; /* Medium gray for a softer contrast */
 }
 
 img, video {
@@ -130,43 +106,6 @@ footer {
     color: #000000; /* Black text for contrast */
     margin-top: 50px;
     border-top: 2px solid #8B5A2B;
-}
-
-/* Modal Styles */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top of everything */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
 }
 
 /* Responsive styles */
@@ -241,32 +180,18 @@ footer {
     }
 }
 
-#gallery {
-    position: relative;
-}
-
-#prev, #next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2em;
-    color: #000;
-    cursor: pointer;
-    user-select: none;
-    padding: 10px;
-}
-
-#prev {
-    left: 0;
-}
-
-#next {
-    right: 0;
-}
-
-.fullsize {
-    max-width: 100%;
-    height: auto;
+/* Styles for the clickable post area */
+.post-link {
+    text-decoration: none;
+    color: inherit;
     display: block;
-    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-link:hover {
+    background-color: #f5f5f5; /* Optional: Light background on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
