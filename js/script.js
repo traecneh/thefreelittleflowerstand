@@ -1,17 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Handle thumbnail click to toggle size
-    document.querySelectorAll('.thumbnail').forEach(function(media) {
-        media.addEventListener('click', function() {
-            if (media.classList.contains('thumbnail')) {
-                media.classList.remove('thumbnail');
-                media.classList.add('fullsize');
-            } else {
-                media.classList.remove('fullsize');
-                media.classList.add('thumbnail');
-            }
-        });
-    });
-
     // Load content into modal and apply thumbnail effect
     function loadModalContent(post) {
         const modal = document.getElementById('modal');
@@ -71,14 +58,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     postElement.innerHTML = `
                         <h3><p><strong>${post.date} - ${post.title}</strong></p></h3>
                         <p>${post.content}</p>
-                        <a href="${post.link}" class="read-more">Read more</a>
                     `;
                 } else {
                     // Older posts, show only date, title, and an excerpt
                     postElement.innerHTML = `
                         <p><strong>${post.date} - ${post.title}</strong></p>
                         <p>${excerpt}</p>
-                        <a href="${post.link}" class="read-more">Read more</a>
                     `;
                 }
 
