@@ -147,8 +147,7 @@
                     if (index === 0) {
                         // Most recent post, show all data
                         postElement.innerHTML = `
-                            <h3>${post.title}</h3>
-                            <p><strong>${post.date}</strong></p>
+                            <h3><p><strong>${post.date} - ${post.title}</strong></p></h3>
                             <p>${post.content}</p>
                             ${generateMediaHTML(post.images, post.videos)}
                         `;
