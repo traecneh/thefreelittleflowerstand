@@ -87,60 +87,63 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const modal = document.getElementById('modal');
-            const modalContent = document.getElementById('modal-body');
-            const closeModal = document.querySelector('.close');
+        const modal = document.getElementById('modal');
+        const modalContent = document.getElementById('modal-body');
+        const closeModal = document.querySelector('.close');
 
-            function generateMediaHTML(images, videos) {
-                let mediaHTML = '';
+        function generateMediaHTML(images, videos) {
+            let mediaHTML = '';
 
-                if (images && images.length > 0) {
-                    images.forEach(image => {
-                        mediaHTML += `<img src="${image}" alt="Flower Image" style="max-width:100%; margin-bottom:10px;">`;
-                    });
-                }
-
-                if (videos && videos.length > 0) {
-                    videos.forEach(video => {
-                        mediaHTML += `
-                            <video controls style="max-width:100%; margin-bottom:10px;">
-                                <source src="${video}" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>`;
-                    });
-                }
-
-                return mediaHTML;
+            if (images && images.length > 0) {
+                images.forEach(image => {
+                    mediaHTML += `<img src="${image}" alt="Flower Image" style="max-width:100%; margin-bottom:10px;">`;
+                });
             }
 
-            function loadModalContent(post) {
-                modalContent.innerHTML = `
-                    <h3>${post.title}</h3>
-                    <p><strong>Date:</strong> ${post.date}</p>
-                    <p>${post.content}</p>
-                    ${generateMediaHTML(post.images, post.videos)}
-                `;
-                modal.style.display = 'block';
+            if (videos && videos.length > 0) {
+                videos.forEach(video => {
+                    mediaHTML += `
+                        <video controls style="max-width:100%; margin-bottom:10px;">
+                            <source src="${video}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>`;
+                });
             }
 
-            closeModal.onclick = function() {
+            return mediaHTML;
+        }
+
+        function loadModalContent(post) {
+            modalContent.innerHTML = `
+                <h3>${post.title}</h3>
+                <p><strong>Date:</strong> ${post.date}</p>
+                <p>${post.content}</p>
+                ${generateMediaHTML(post.images, post.videos)}
+            `;
+            modal.style.display = 'block';
+        }
+
+        closeModal.onclick = function() {
+            modal.style.display = 'none';
+        };
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
                 modal.style.display = 'none';
-            };
+            }
+        };
 
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = 'none';
-                }
-            };
+        fetch('data/posts.json')
+            .then(response => response.json())
+            .then(posts => {
+                const arrangementsSection = document.getElementById('arrangements');
 
-            fetch('data/posts.json')
-                .then(response => response.json())
-                .then(posts => {
-                    const arrangementsSection = document.getElementById('arrangements');
+                posts.forEach((post, index) => {
+                    const postElement = document.createElement('div');
+                    postElement.className = 'post';
 
-                    posts.forEach(post => {
-                        const postElement = document.createElement('div');
-                        postElement.className = 'post';
+                    if (index === 0) {
+                        // Most recent post, show all data
                         postElement.innerHTML = `
                             <h3>${post.title}</h3>
                             <p><strong>Date:</strong> ${post.date}</p>
@@ -148,18 +151,27 @@
                             ${generateMediaHTML(post.images, post.videos)}
                             <p><a href="${post.link}" class="read-more" target="_blank">Read more</a></p>
                         `;
+                    } else {
+                        // Older posts, show only title, date, and link
+                        postElement.innerHTML = `
+                            <h3>${post.title}</h3>
+                            <p><strong>Date:</strong> ${post.date}</p>
+                            <p><a href="${post.link}" class="read-more" target="_blank">Read more</a></p>
+                        `;
+                    }
 
-                        const readMoreLink = postElement.querySelector('.read-more');
-                        readMoreLink.onclick = function(event) {
-                            event.preventDefault();
-                            loadModalContent(post);
-                        };
+                    const readMoreLink = postElement.querySelector('.read-more');
+                    readMoreLink.onclick = function(event) {
+                        event.preventDefault();
+                        loadModalContent(post);
+                    };
 
-                        arrangementsSection.appendChild(postElement);
-                    });
-                })
-                .catch(error => console.error('Error loading posts:', error));
-        });
+                    arrangementsSection.appendChild(postElement);
+                });
+            })
+            .catch(error => console.error('Error loading posts:', error));
+    });
+
     </script>
 </body>
 </html>
