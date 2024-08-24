@@ -54,10 +54,27 @@ document.addEventListener('DOMContentLoaded', function() {
                 const excerpt = post.content.split(' ').slice(0, 10).join(' ') + '...';
 
                 if (index === 0) {
-                    // Most recent post, show all data
+                    // Most recent post, show all data including images and videos
+                    let mediaHTML = '';
+
+                    // Append images
+                    post.images.forEach(image => {
+                        mediaHTML += `<img src="${image}" alt="Post Image" class="thumbnail">`;
+                    });
+
+                    // Append videos
+                    post.videos.forEach(video => {
+                        mediaHTML += `
+                            <video controls class="thumbnail">
+                                <source src="${video}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>`;
+                    });
+
                     postElement.innerHTML = `
                         <h3><p><strong>${post.date} - ${post.title}</strong></p></h3>
                         <p>${post.content}</p>
+                        ${mediaHTML}
                     `;
                 } else {
                     // Older posts, show only date, title, and an excerpt
