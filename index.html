@@ -142,26 +142,26 @@
                     const postElement = document.createElement('div');
                     postElement.className = 'post';
 
+                    const excerpt = post.content.split(' ').slice(0, 10).join(' ') + '...';
+
                     if (index === 0) {
                         // Most recent post, show all data
                         postElement.innerHTML = `
                             <h3>${post.title}</h3>
-                            <p><strong>Date:</strong> ${post.date}</p>
+                            <p><strong>${post.date}</strong></p>
                             <p>${post.content}</p>
                             ${generateMediaHTML(post.images, post.videos)}
-                            <p><a href="${post.link}" class="read-more" target="_blank">Read more</a></p>
                         `;
                     } else {
-                        // Older posts, show only title, date, and link
+                        // Older posts, show only date, title, and an excerpt
                         postElement.innerHTML = `
-                            <h3>${post.title}</h3>
-                            <p><strong>Date:</strong> ${post.date}</p>
-                            <p><a href="${post.link}" class="read-more" target="_blank">Read more</a></p>
+                            <p><strong>${post.date} - ${post.title}</strong></p>
+                            <p>${excerpt}</p>
                         `;
                     }
 
-                    const readMoreLink = postElement.querySelector('.read-more');
-                    readMoreLink.onclick = function(event) {
+                    postElement.style.cursor = 'pointer'; // Indicate the post is clickable
+                    postElement.onclick = function(event) {
                         event.preventDefault();
                         loadModalContent(post);
                     };
@@ -171,6 +171,7 @@
             })
             .catch(error => console.error('Error loading posts:', error));
     });
+
 
 
 

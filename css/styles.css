@@ -1,20 +1,20 @@
 /* General styles */
 body {
-    font-family: 'Verdana', 'Arial', sans-serif; /* Default font: Verdana, Fallback: Arial */
-    background-color: #faf3e0; /* Soft, creamy background */
-    color: #3e3e3e; /* Deep, warm gray for text */
+    font-family: 'Verdana', 'Arial', sans-serif;
+    background-color: #faf3e0;
+    color: #3e3e3e;
     margin: 0;
     padding: 0;
     line-height: 1.8;
 }
 
 header {
-    background-color: #FFD700; /* Sunshine yellow */
-    color: #000000; /* Black text for contrast */
+    background-color: #FFD700;
+    color: #000000;
     text-align: center;
     padding: 2.5em 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    border-bottom: 2px solid #8B5A2B; /* Warm earthy brown border */
+    border-bottom: 2px solid #8B5A2B;
 }
 
 .header-image {
@@ -22,21 +22,21 @@ header {
     margin: 0 auto;
     max-width: 100%;
     height: auto;
-    border-radius: 0; /* Remove rounded corners */
-    box-shadow: none; /* Remove any shadow */
-    border: none; /* Ensure no border is applied */
-    background-color: transparent; /* Ensure the background is transparent */
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
 }
 
 header h1 {
-    font-family: 'Verdana', 'Arial', sans-serif; /* Update header font to Verdana */
+    font-family: 'Verdana', 'Arial', sans-serif;
     font-size: 3em;
     margin: 0;
-    color: #000000; /* Black for better contrast */
+    color: #000000;
 }
 
 nav {
-    margin-top: 20px; /* Add space between the mission statement and the navigation */
+    margin-top: 20px;
 }
 
 nav ul {
@@ -45,7 +45,7 @@ nav ul {
     margin: 30px 0 0;
     display: flex;
     justify-content: center;
-    background-color: #FFD700; /* Consistent yellow in nav background */
+    background-color: #FFD700;
     padding: 10px 0;
     border-bottom: 1px solid #8B5A2B;
 }
@@ -55,9 +55,9 @@ nav ul li {
 }
 
 nav ul li a {
-    font-family: 'Verdana', 'Arial', sans-serif; /* Update navigation font to Verdana */
-    font-size: 1.5em; /* Increase font size for navigation items */
-    color: #3e3e3e; /* Warm gray for links */
+    font-family: 'Verdana', 'Arial', sans-serif;
+    font-size: 1.5em;
+    color: #3e3e3e;
     text-decoration: none;
     font-weight: bold;
     padding: 10px 15px;
@@ -66,7 +66,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #8B5A2B; /* Earthy brown for hover effect */
+    background-color: #8B5A2B;
     color: #fff;
 }
 
@@ -74,10 +74,10 @@ main {
     max-width: 900px;
     margin: 50px auto;
     padding: 30px;
-    background-color: #ffffff; /* White background for content */
+    background-color: #ffffff;
     border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for a cozy feel */
-    border: 1px solid #FFD700; /* Yellow border for definition */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #FFD700;
     position: relative;
     z-index: 2;
 }
@@ -89,58 +89,59 @@ main {
 }
 
 .post {
-    padding: 10px;
-    border: 1px solid #f0d1b0; /* Lighter, textured border */
+    padding: 15px;
+    border: 1px solid #f0d1b0;
     border-radius: 10px;
     background-color: #ffffff;
+    transition: background-color 0.3s ease;
 }
 
 .post h3 {
     margin-bottom: 10px;
 }
 
-#arrangements > .post:first-child {
-    border-bottom: 0; /* Remove bottom border from the most recent post */
+.post:hover {
+    background-color: #f5f5dc; /* Light beige background on hover */
 }
 
 img, video {
     max-width: 100%;
     height: auto;
     margin-bottom: 25px;
-    border-radius: 10px; /* Soft rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Cozy shadow for warmth */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 footer {
     text-align: center;
     padding: 30px 0;
-    background-color: #FFD700; /* Sunshine yellow */
-    color: #000000; /* Black text for contrast */
+    background-color: #FFD700;
+    color: #000000;
     margin-top: 50px;
     border-top: 2px solid #8B5A2B;
 }
 
 /* Modal Styles */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top of everything */
+    display: none;
+    position: fixed;
+    z-index: 1000;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .close {
@@ -208,7 +209,7 @@ footer {
     margin-top: 15px;
     display: flex;
     justify-content: center;
-    gap: 20px; /* Space between the icons */
+    gap: 20px;
 }
 
 .social-icons a {
