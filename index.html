@@ -113,17 +113,21 @@
                             <p><strong>Date:</strong> ${post.date}</p>
                             <p>${post.content}</p>
                             ${generateMediaHTML(post.images, post.videos)}
-                            <p><a href="${post.link}" class="read-more">Read more</a></p>
+                            <p><a href="${post.link}" class="read-more" target="_blank">Read more</a></p>
                         `;
-                        postElement.querySelector('.read-more').onclick = function(event) {
+
+                        const readMoreLink = postElement.querySelector('.read-more');
+                        readMoreLink.onclick = function(event) {
                             event.preventDefault();
                             loadModalContent(post);
                         };
+
                         arrangementsSection.appendChild(postElement);
                     });
                 })
                 .catch(error => console.error('Error loading posts:', error));
         });
+
     </script>
 </body>
 </html>
