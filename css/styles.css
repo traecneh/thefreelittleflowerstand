@@ -239,3 +239,31 @@ footer {
     text-decoration: none;
     cursor: pointer;
 }
+
+/* Add this CSS to your styles.css */
+#arrangements {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#older-posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.post {
+    padding: 10px;
+    border: 1px solid #f0d1b0; /* Lighter, textured border */
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.post h3 {
+    margin-bottom: 10px;
+}
+
+#arrangements > .post:first-child {
+    border-bottom: 0; /* Remove bottom border from the most recent post */
+}

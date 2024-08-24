@@ -138,6 +138,10 @@
             .then(posts => {
                 const arrangementsSection = document.getElementById('arrangements');
 
+                // Create a div for older posts to go into two columns
+                const olderPostsContainer = document.createElement('div');
+                olderPostsContainer.id = 'older-posts';
+
                 posts.forEach((post, index) => {
                     const postElement = document.createElement('div');
                     postElement.className = 'post';
@@ -151,6 +155,7 @@
                             ${generateMediaHTML(post.images, post.videos)}
                             <p><a href="${post.link}" class="read-more" target="_blank">Read more</a></p>
                         `;
+                        arrangementsSection.appendChild(postElement); // Add to main section
                     } else {
                         // Older posts, show only title, date, and link
                         postElement.innerHTML = `
@@ -158,6 +163,7 @@
                             <p><strong>Date:</strong> ${post.date}</p>
                             <p><a href="${post.link}" class="read-more" target="_blank">Read more</a></p>
                         `;
+                        olderPostsContainer.appendChild(postElement); // Add to older posts container
                     }
 
                     const readMoreLink = postElement.querySelector('.read-more');
@@ -165,12 +171,15 @@
                         event.preventDefault();
                         loadModalContent(post);
                     };
-
-                    arrangementsSection.appendChild(postElement);
                 });
+
+                // Append the older posts container after the most recent post
+                arrangementsSection.appendChild(olderPostsContainer);
             })
             .catch(error => console.error('Error loading posts:', error));
+
     });
+
 
     </script>
 </body>
