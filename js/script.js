@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Load content into modal and apply thumbnail effect
+    // Load content into modal and apply gallery functionality
     function loadModalContent(post) {
         const modal = document.getElementById('modal');
         const modalContent = document.getElementById('modal-body');
         const galleryItems = [...post.images, ...post.videos]; // Combine images and videos
-    
+
         let currentIndex = 0;
-    
+
         function showGalleryItem(index) {
             const item = galleryItems[index];
             modalContent.innerHTML = '';
-    
+
             if (item.endsWith('.mp4')) {
                 modalContent.innerHTML = `
                     <video controls class="fullsize">
@@ -21,39 +21,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 modalContent.innerHTML = `<img src="${item}" alt="Gallery Image" class="fullsize">`;
             }
         }
-    
+
         // Show the first item
         showGalleryItem(currentIndex);
-    
+
         // Handle next and previous
         document.getElementById('next').onclick = function() {
             currentIndex = (currentIndex + 1) % galleryItems.length;
             showGalleryItem(currentIndex);
         };
-    
+
         document.getElementById('prev').onclick = function() {
             currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
             showGalleryItem(currentIndex);
         };
-    
-        modal.style.display = 'block';
-    }
-    
 
-    // Apply thumbnail effect to images/videos and toggle size on click
-    function applyThumbnailEffect(container) {
-        container.querySelectorAll('img.thumbnail, video.thumbnail').forEach(function(media) {
-            media.addEventListener('click', function(event) {
-                event.stopPropagation(); // Prevent modal from opening
-                if (media.classList.contains('thumbnail')) {
-                    media.classList.remove('thumbnail');
-                    media.classList.add('fullsize');
-                } else {
-                    media.classList.remove('fullsize');
-                    media.classList.add('thumbnail');
-                }
-            });
-        });
+        modal.style.display = 'block';
     }
 
     // Close modal when the close button is clicked
@@ -105,9 +88,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         <p>${post.content}</p>
                         ${mediaHTML}
                     `;
-
-                    // Apply the thumbnail effect for the most recent post
-                    applyThumbnailEffect(postElement);
                 } else {
                     // Older posts, show only date, title, and an excerpt
                     postElement.innerHTML = `
@@ -116,13 +96,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     `;
                 }
 
-                // Make the entire post clickable, except the thumbnails in the most recent post
+                // Make the entire post clickable to open the gallery in the modal
                 postElement.style.cursor = 'pointer';
                 postElement.onclick = function(event) {
-                    if (!event.target.classList.contains('thumbnail')) {
-                        event.preventDefault();
-                        loadModalContent(post);
-                    }
+                    event.preventDefault();
+                    loadModalContent(post);
                 };
 
                 arrangementsSection.appendChild(postElement);
