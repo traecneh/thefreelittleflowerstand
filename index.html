@@ -113,7 +113,7 @@
                             <p><strong>Date:</strong> ${post.date}</p>
                             <p>${post.content}</p>
                             ${generateMediaHTML(post.images, post.videos)}
-                            <p><a href="#" class="read-more">Read more</a></p>
+                            <p><a href="${post.link}" class="read-more">Read more</a></p>
                         `;
                         postElement.querySelector('.read-more').onclick = function(event) {
                             event.preventDefault();
