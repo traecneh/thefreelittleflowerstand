@@ -229,3 +229,21 @@ footer {
         transform: scale(1.6); /* Pulses up to 20% larger */
     }
 }
+
+.thumbnail {
+    max-width: 200px; /* Adjust the size as needed */
+    max-height: 150px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+}
+
+.thumbnail:hover {
+    transform: scale(1.1); /* Slightly enlarge the thumbnail on hover */
+}
+
+.fullsize {
+    max-width: 100%;
+    max-height: auto;
+}

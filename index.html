@@ -113,6 +113,21 @@
             return mediaHTML;
         }
 
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.thumbnail').forEach(function(media) {
+                media.addEventListener('click', function() {
+                    if (media.classList.contains('thumbnail')) {
+                        media.classList.remove('thumbnail');
+                        media.classList.add('fullsize');
+                    } else {
+                        media.classList.remove('fullsize');
+                        media.classList.add('thumbnail');
+                    }
+                });
+            });
+        });
+
+
         function loadModalContent(post) {
             fetch(post.link)
                 .then(response => response.text())
