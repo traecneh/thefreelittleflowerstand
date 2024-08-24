@@ -3,28 +3,57 @@ document.addEventListener('DOMContentLoaded', function() {
     function loadModalContent(post) {
         const modal = document.getElementById('modal');
         const modalContent = document.getElementById('modal-body');
+        const galleryItems = [...post.images, ...post.videos]; // Combine images and videos
+    
+        let currentIndex = 0;
+    
+        function showGalleryItem(index) {
+            const item = galleryItems[index];
+            modalContent.innerHTML = '';
+    
+            if (item.endsWith('.mp4')) {
+                modalContent.innerHTML = `
+                    <video controls class="fullsize">
+                        <source src="${item}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>`;
+            } else {
+                modalContent.innerHTML = `<img src="${item}" alt="Gallery Image" class="fullsize">`;
+            }
+        }
+    
+        // Show the first item
+        showGalleryItem(currentIndex);
+    
+        // Handle next and previous
+        document.getElementById('next').onclick = function() {
+            currentIndex = (currentIndex + 1) % galleryItems.length;
+            showGalleryItem(currentIndex);
+        };
+    
+        document.getElementById('prev').onclick = function() {
+            currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+            showGalleryItem(currentIndex);
+        };
+    
+        modal.style.display = 'block';
+    }
+    
 
-        fetch(post.link)
-            .then(response => response.text())
-            .then(content => {
-                modalContent.innerHTML = content;
-                modal.style.display = 'block';
-
-                // Apply the thumbnail effect to the newly loaded content
-                modalContent.querySelectorAll('img, video').forEach(function(media) {
+    // Apply thumbnail effect to images/videos and toggle size on click
+    function applyThumbnailEffect(container) {
+        container.querySelectorAll('img.thumbnail, video.thumbnail').forEach(function(media) {
+            media.addEventListener('click', function(event) {
+                event.stopPropagation(); // Prevent modal from opening
+                if (media.classList.contains('thumbnail')) {
+                    media.classList.remove('thumbnail');
+                    media.classList.add('fullsize');
+                } else {
+                    media.classList.remove('fullsize');
                     media.classList.add('thumbnail');
-                    media.addEventListener('click', function() {
-                        if (media.classList.contains('thumbnail')) {
-                            media.classList.remove('thumbnail');
-                            media.classList.add('fullsize');
-                        } else {
-                            media.classList.remove('fullsize');
-                            media.classList.add('thumbnail');
-                        }
-                    });
-                });
-            })
-            .catch(error => console.error('Error loading post content:', error));
+                }
+            });
+        });
     }
 
     // Close modal when the close button is clicked
@@ -76,6 +105,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         <p>${post.content}</p>
                         ${mediaHTML}
                     `;
+
+                    // Apply the thumbnail effect for the most recent post
+                    applyThumbnailEffect(postElement);
                 } else {
                     // Older posts, show only date, title, and an excerpt
                     postElement.innerHTML = `
@@ -84,11 +116,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     `;
                 }
 
-                // Make the entire post clickable
+                // Make the entire post clickable, except the thumbnails in the most recent post
                 postElement.style.cursor = 'pointer';
                 postElement.onclick = function(event) {
-                    event.preventDefault();
-                    loadModalContent(post);
+                    if (!event.target.classList.contains('thumbnail')) {
+                        event.preventDefault();
+                        loadModalContent(post);
+                    }
                 };
 
                 arrangementsSection.appendChild(postElement);
