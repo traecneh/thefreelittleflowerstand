@@ -114,14 +114,15 @@
         }
 
         function loadModalContent(post) {
-            modalContent.innerHTML = `
-                <h3>${post.title}</h3>
-                <p><strong>Date:</strong> ${post.date}</p>
-                <p>${post.content}</p>
-                ${generateMediaHTML(post.images, post.videos)}
-            `;
-            modal.style.display = 'block';
+            fetch(post.link)
+                .then(response => response.text())
+                .then(content => {
+                    modalContent.innerHTML = content;
+                    modal.style.display = 'block';
+                })
+                .catch(error => console.error('Error loading post content:', error));
         }
+
 
         closeModal.onclick = function() {
             modal.style.display = 'none';
