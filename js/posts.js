@@ -25,10 +25,12 @@ document.addEventListener('DOMContentLoaded', function() {
                             </video>`;
                     });
 
+
+                    const excerpt = post.content.split(' ').slice(0, 10).join(' ') + '...';
                     postElement.innerHTML = `
                         <a href="${post.link}" class="post-link">
                             <p><strong>${post.date} - ${post.title}</strong></p>
-                            <p>${post.content}</p>
+                            <p>${excerpt}</p>
                             ${mediaHTML}
                         </a>
                     `;
