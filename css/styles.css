@@ -77,7 +77,7 @@ main {
 .post {
     margin-bottom: 50px;
     padding-bottom: 40px;
-    border-bottom: 2px solid #f0d1b0; /* Lighter, textured border */
+    /* border-bottom: 2px solid #f0d1b0; /* Lighter, textured border */
 }
 
 .post h3 {
