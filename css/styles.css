@@ -75,9 +75,13 @@ main {
 }
 
 .post {
-    margin-bottom: 50px;
-    padding-bottom: 40px;
-    /* border-bottom: 2px solid #f0d1b0; /* Lighter, textured border */
+    margin-bottom: 20px; /* Reduced margin for a more compact look */
+    padding-bottom: 20px; /* Reduced padding */
+}
+
+.post:last-child {
+    margin-bottom: 0; /* No margin at the bottom of the last post */
+    padding-bottom: 0; /* No padding at the bottom of the last post */
 }
 
 .post h3 {
