@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 arrangementsSection.appendChild(postElement);
 
                 // Add a separator inside the post element, except after the last post
-                if (index < posts.length - 2) {
+                if (index < posts.length - 1) {
                     const separator = document.createElement('hr');
                     separator.className = 'post-separator';
                     postElement.appendChild(separator);
