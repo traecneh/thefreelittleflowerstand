@@ -11,28 +11,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 let mediaHTML = '';
 
-                // Append images
-                post.images.forEach(image => {
-                    mediaHTML += `<img src="${image}" alt="Post Image" class="thumbnail">`;
-                });
-
-                // Append videos
-                post.videos.forEach(video => {
-                    mediaHTML += `
-                        <video controls class="thumbnail">
-                            <source src="${video}" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>`;
-                });
-
-                const excerpt = post.content.split(' ').slice(0, 10).join(' ') + '...';
-
                 if (index === 0) {
                     // Most recent post, show all data including images and videos
                     post.images.forEach(image => {
                         mediaHTML += `<img src="${image}" alt="Post Image" class="thumbnail-image">`;
                     });
-                
+
                     post.videos.forEach(video => {
                         mediaHTML += `
                             <video controls class="thumbnail-image">
@@ -40,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 Your browser does not support the video tag.
                             </video>`;
                     });
-                
+
                     postElement.innerHTML = `
                         <a href="${post.link}" class="post-link">
                             <h3><p><strong>${post.date} - ${post.title}</strong></p></h3>
@@ -50,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     `;
                 } else {
                     // Older posts, show only date, title, and an excerpt
+                    const excerpt = post.content.split(' ').slice(0, 10).join(' ') + '...';
                     postElement.innerHTML = `
                         <a href="${post.link}" class="post-link">
                             <p><strong>${post.date} - ${post.title}</strong></p>
