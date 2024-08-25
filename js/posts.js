@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     postElement.innerHTML = `
                         <a href="${post.link}" class="post-link">
-                            <h3><p><strong>${post.date} - ${post.title}</strong></p></h3>
+                            <p><strong>${post.date} - ${post.title}</strong></p>
                             <p>${post.content}</p>
                             ${mediaHTML}
                         </a>
