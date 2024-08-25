@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 let mediaHTML = '';
 
+                const excerpt = post.content.split(' ').slice(0, 10).join(' ') + '...';
+
                 if (index === 0) {
                     // Most recent post, show all data including images and videos
                     post.images.forEach(image => {
@@ -25,8 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
                             </video>`;
                     });
 
-
-                    const excerpt = post.content.split(' ').slice(0, 10).join(' ') + '...';
                     postElement.innerHTML = `
                         <a href="${post.link}" class="post-link">
                             <p><strong>${post.date} - ${post.title}</strong></p>
@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     `;
                 } else {
                     // Older posts, show only date, title, and an excerpt
-                    const excerpt = post.content.split(' ').slice(0, 10).join(' ') + '...';
                     postElement.innerHTML = `
                         <a href="${post.link}" class="post-link">
                             <p><strong>${post.date} - ${post.title}</strong></p>
@@ -47,6 +46,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // Add the post element to the page
                 arrangementsSection.appendChild(postElement);
+
+                // Add a separator only if this is not the last post
+                if (index < posts.length - 1) {
+                    const separator = document.createElement('hr');
+                    separator.className = 'post-separator';
+                    arrangementsSection.appendChild(separator);
+                }
             });
 
             // Make the entire post area clickable
