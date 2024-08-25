@@ -1,60 +1,11 @@
 [
     {
-        "title": "AWFUL Roses and Daisies and bacon!",
+        "title": "Our First Bloom: A New Chapter Begins",
         "date": "August 25, 2024",
         "comparedate": "2024-08-25",
-        "content": "Today we put out a beautiful arrangement of fresh roses and daisies. The colors were vibrant and the fragrance was lovely!",
-        "images": [
-            "posts/2024-08-25/images/beautiful-lyssa.jpg",
-            "posts/2024-08-25/images/carrots.png",
-            "posts/2024-08-25/images/evelyn-phone.jpg",
-            "posts/2024-08-25/images/happiness.jpg"
-        ],
-        "videos": [
-            "posts/2024-08-25/videos/linley.mp4",
-            "posts/2024-08-25/videos/killua.mp4"
-        ],
+        "content": "Today is a day we’ve dreamed about for a long time. With excitement in our hearts and flowers in hand, we’re thrilled to share the very first post on The Free Little Flower Stand website (and the big launch of our official sign)! What started as a simple idea—a small gesture of kindness—has blossomed into something beautiful, something we hope will last for years to come.\n\nOur bouquets today are a blend of Basil, Zinnia, Rudbeckia, Ageratum, Celosia, Angelonia, Dill, and Amaranth. Each flower is unique, each bouquet different, just like the moments in life that inspire us to keep giving. We don’t know who will find these flowers today, but we hope they bring joy, comfort, and a reminder that beauty can be found in the most unexpected places.\n\nWe believe that even the smallest gestures, like offering free flowers, can have a big impact. Whether you take a bouquet home, share it with someone you love, or simply smile as you drive by, our hope is that these flowers bring a little more joy into the world today.\n\nThank you for being a part of this moment with us.",
+        "images": [],
+        "videos": [],
         "link": "posts/2024-08-25/index.html"
-    },
-    {
-        "title": "Fresh Roses and Daisies and bacon!",
-        "date": "August 20, 2024",
-        "comparedate": "2024-08-20",
-        "content": "Today we put out a beautiful arrangement of fresh roses and daisies. The colors were vibrant and the fragrance was lovely!",
-        "images": [
-            "posts/2024-08-20/images/beautiful-lyssa.jpg",
-            "posts/2024-08-20/images/carrots.png",
-            "posts/2024-08-20/images/evelyn-phone.jpg",
-            "posts/2024-08-20/images/happiness.jpg"
-        ],
-        "videos": [
-            "posts/2024-08-20/videos/linley.mp4",
-            "posts/2024-08-20/videos/killua.mp4"
-        ],
-        "link": "posts/2024-08-20/index.html"
-    },
-    {
-        "title": "Sunflower Delight",
-        "date": "August 15, 2024",
-        "comparedate": "2024-08-15",
-        "content": "Our sunflower arrangement brought a lot of smiles! The bright and cheerful sunflowers were a hit in the neighborhood.",
-        "images": [
-            "posts/2024-08-15/images/sunflowers-1.jpg", 
-            "posts/2024-08-15/images/sunflowers-2.jpg"
-        ],
-        "videos": [],
-        "link": "posts/2024-08-15/index.html"
-    },
-    {
-        "title": "Summer Garden Mix",
-        "date": "July 15, 2024",
-        "comparedate": "2024-07-15",
-        "content": "This week, we put together a lovely mix of summer garden flowers, including zinnias, marigolds, and lavender. The vibrant colors and fresh scent made this bouquet a favorite among those who passed by.",
-        "images": [
-            "posts/2024-07-15/images/summer-garden-1.jpg", 
-            "posts/2024-07-15/images/summer-garden-2.jpg"
-        ],
-        "videos": [],
-        "link": "posts/2024-07-15/index.html"
     }
 ]
