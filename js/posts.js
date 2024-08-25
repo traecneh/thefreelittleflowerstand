@@ -29,6 +29,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 if (index === 0) {
                     // Most recent post, show all data including images and videos
+                    post.images.forEach(image => {
+                        mediaHTML += `<img src="${image}" alt="Post Image" class="thumbnail-image">`;
+                    });
+                
+                    post.videos.forEach(video => {
+                        mediaHTML += `
+                            <video controls class="thumbnail-image">
+                                <source src="${video}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>`;
+                    });
+                
                     postElement.innerHTML = `
                         <a href="${post.link}" class="post-link">
                             <h3><p><strong>${post.date} - ${post.title}</strong></p></h3>
