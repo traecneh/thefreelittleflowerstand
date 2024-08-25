@@ -47,11 +47,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Add the post element to the page
                 arrangementsSection.appendChild(postElement);
 
-                // Add a separator only if this is not the last post
+                // Add a separator inside the post element, except after the last post
                 if (index < posts.length - 1) {
                     const separator = document.createElement('hr');
                     separator.className = 'post-separator';
-                    arrangementsSection.appendChild(separator);
+                    postElement.appendChild(separator);
                 }
             });
 
