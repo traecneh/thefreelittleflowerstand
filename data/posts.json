@@ -1,23 +1,25 @@
 [
     {
-        "title": "BAD Roses and Daisies and bacon!",
-        "date": "August 24, 2024",
+        "title": "AWFUL Roses and Daisies and bacon!",
+        "date": "August 25, 2024",
+        "comparedate": "2024-08-25",
         "content": "Today we put out a beautiful arrangement of fresh roses and daisies. The colors were vibrant and the fragrance was lovely!",
         "images": [
-            "posts/2024-08-20/images/beautiful-lyssa.jpg",
-            "posts/2024-08-20/images/carrots.png",
-            "posts/2024-08-20/images/evelyn-phone.jpg",
-            "posts/2024-08-20/images/happiness.jpg"
+            "posts/2024-08-25/images/beautiful-lyssa.jpg",
+            "posts/2024-08-25/images/carrots.png",
+            "posts/2024-08-25/images/evelyn-phone.jpg",
+            "posts/2024-08-25/images/happiness.jpg"
         ],
         "videos": [
-            "posts/2024-08-20/videos/linley.mp4",
-            "posts/2024-08-20/videos/killua.mp4"
+            "posts/2024-08-25/videos/linley.mp4",
+            "posts/2024-08-25/videos/killua.mp4"
         ],
-        "link": "posts/2024-08-24/index.html"
+        "link": "posts/2024-08-25/index.html"
     },
     {
         "title": "Fresh Roses and Daisies and bacon!",
         "date": "August 20, 2024",
+        "comparedate": "2024-08-20",
         "content": "Today we put out a beautiful arrangement of fresh roses and daisies. The colors were vibrant and the fragrance was lovely!",
         "images": [
             "posts/2024-08-20/images/beautiful-lyssa.jpg",
@@ -34,6 +36,7 @@
     {
         "title": "Sunflower Delight",
         "date": "August 15, 2024",
+        "comparedate": "2024-08-15",
         "content": "Our sunflower arrangement brought a lot of smiles! The bright and cheerful sunflowers were a hit in the neighborhood.",
         "images": [
             "posts/2024-08-15/images/sunflowers-1.jpg", 
@@ -45,6 +48,7 @@
     {
         "title": "Summer Garden Mix",
         "date": "July 15, 2024",
+        "comparedate": "2024-07-15",
         "content": "This week, we put together a lovely mix of summer garden flowers, including zinnias, marigolds, and lavender. The vibrant colors and fresh scent made this bouquet a favorite among those who passed by.",
         "images": [
             "posts/2024-07-15/images/summer-garden-1.jpg", 
