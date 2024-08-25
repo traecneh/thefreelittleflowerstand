@@ -37,6 +37,28 @@
         </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const queryParams = new URLSearchParams(window.location.search);
+            const noRedirect = queryParams.has('noredirect');
+
+            if (!noRedirect) {
+                const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
+                const formattedDate = today.replace(/-/g, '/'); // Replace hyphens with slashes to match folder structure
+
+                fetch('data/posts.json')
+                    .then(response => response.json())
+                    .then(posts => {
+                        const todayPost = posts.find(post => post.date === today);
+                        if (todayPost) {
+                            window.location.href = `${todayPost.link}?noredirect=true`; // Redirect to today's post with a parameter to avoid redirect loop
+                        }
+                    })
+                    .catch(error => console.error('Error checking today\'s post:', error));
+            }
+        });
+    </script>
+
     <script src="js/posts.js"></script>
 </body>
 </html>
