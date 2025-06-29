@@ -1,5 +1,18 @@
 [
     {
+        "title": "Season’s First Bloom",
+        "date": "June 29, 2025",
+        "comparedate": "2025-06-29",
+        "content": "The sun finally won its tug-of-war with spring showers, and our garden answered with a joyful chorus of color.",
+        "images": [
+            "posts/2025-06-29/images/image-1.jpg",
+            "posts/2025-06-29/images/image-2.jpg",
+            "posts/2025-06-29/images/image-3.jpg"
+        ],
+        "videos": [],
+        "link": "posts/2025-06-29/index.html"
+    },
+    {
         "title": "The Beauty in the Broken",
         "date": "September 8, 2024",
         "comparedate": "2024-09-08",
