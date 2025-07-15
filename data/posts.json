@@ -1,5 +1,20 @@
 [
     {
+        "title": "Fresh‑Picked Joy Drop!",
+        "date": "July 15, 2025",
+        "comparedate": "2025-07-15",
+        "content": "Today’s bouquets are a riot of summer cheer, starring: Queen Anne’s lace, Black‑Eyed Susans, cosmos, yarrow, zinnias, snapdragons, salvia, dill, basil, sage, oregano, bachelor’s buttons, and splashy coleus leaves for extra wow.",
+        "images": [
+            "posts/2025-07-15/images/image-1.jpg",
+            "posts/2025-07-15/images/image-2.jpg",
+            "posts/2025-07-15/images/image-3.jpg",
+            "posts/2025-07-15/images/image-4.jpg",
+            "posts/2025-07-15/images/image-5.jpg"
+        ],
+        "videos": [],
+        "link": "posts/2025-07-15/index.html"
+    },
+    {
         "title": "Season’s First Bloom",
         "date": "June 29, 2025",
         "comparedate": "2025-06-29",
