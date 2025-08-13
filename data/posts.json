@@ -1,5 +1,24 @@
 [
     {
+        "title": "Weathered, but Wonderful",
+        "date": "August 13, 2025",
+        "comparedate": "2025-08-13",
+        "content": "This week’s flowers have been through a bit more life than usual, a stretch of really hot days, some serious pruning, and I didn’t get to arranging them as quickly as I’d hoped. But they still have so much beauty to share, and I didn’t want them to go to waste. So, I gathered them up and made some cheerful arrangements for anyone who’d like to take one home and enjoy.",
+        "images": [
+            "posts/2025-08-13/images/image-1.jpg",
+            "posts/2025-08-13/images/image-2.jpg",
+            "posts/2025-08-13/images/image-3.jpg",
+            "posts/2025-08-13/images/image-4.jpg",
+            "posts/2025-08-13/images/image-5.jpg",
+            "posts/2025-08-13/images/image-6.jpg",
+            "posts/2025-08-13/images/image-7.jpg",
+            "posts/2025-08-13/images/image-8.jpg",
+            "posts/2025-08-13/images/image-9.jpg"           
+        ],
+        "videos": [],
+        "link": "posts/2025-08-13/index.html"
+    },
+    {
         "title": "Pop‑Up Bloom Alert!",
         "date": "July 20, 2025",
         "comparedate": "2025-07-20",
