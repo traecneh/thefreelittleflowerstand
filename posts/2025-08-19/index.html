@@ -62,51 +62,66 @@
             <p>Stop by and grab a bouquet to bring a little sunshine home!</p>
             <p>- The Free Little Flower Stand</p>
             
-            <!-- First Video -->
-            <video controls playsinline class="slide-media">
-                <source src="videos/video-1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-
-            <!-- Second Video -->
-            <video controls playsinline class="slide-media">
-                <source src="videos/video-2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-
-            <!-- Container for the image gallery -->
+            <!-- Container for the image/video gallery -->
             <div class="container">
 
-                <!-- Full-width images with number text -->
-                <div class="mySlides">
-                    <div class="numbertext">1 / 6</div>
-                    <img src="images/image-1.jpg" alt="Image of Flowers">
-                </div>
-                <div class="mySlides">
-                    <div class="numbertext">2 / 6</div>
-                    <img src="images/image-2.jpg" alt="Image of Flowers">
-                </div>
-                <div class="mySlides">
-                    <div class="numbertext">3 / 6</div>
-                    <img src="images/image-3.jpg" alt="Image of Flowers">
-                </div>
-                <div class="mySlides">
-                    <div class="numbertext">4 / 6</div>
-                    <img src="images/image-4.jpg" alt="Image of Flowers">
-                </div>
-                <div class="mySlides">
-                    <div class="numbertext">5 / 6</div>
-                    <img src="images/image-5.jpg" alt="Image of Flowers">
-                </div>
-                <div class="mySlides">
-                    <div class="numbertext">6 / 6</div>
-                    <img src="images/image-6.jpg" alt="Image of Flowers">
-                </div>
-
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <!-- Slide 2 - Video -->
+            <div class="mySlides" data-caption="Cutting garden walk-through (video)">
+                <div class="numbertext">1 / 8</div>
+                <video class="slide-media" controls muted playsinline preload="metadata" poster="images/image-2.jpg">
+                <source src="videos/video-1.mp4" type="video/mp4">
+                </video>
             </div>
+
+            <!-- Slide 4 - Video -->
+            <div class="mySlides" data-caption="Bouquet bundling timelapse (video)">
+                <div class="numbertext">2 / 8</div>
+                <video class="slide-media" controls muted playsinline preload="metadata" poster="images/image-3.jpg">
+                <source src="videos/video-2.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <!-- Slide 1 - Image -->
+            <div class="mySlides" data-caption="Warm summer bouquet with zinnias">
+                <div class="numbertext">3 / 8</div>
+                <img src="images/image-1.jpg" alt="Warm summer bouquet with zinnias">
+            </div>
+
+            
+
+            <!-- Slide 3 - Image -->
+            <div class="mySlides" data-caption="Celosia and amaranth texture mix">
+                <div class="numbertext">4 / 8</div>
+                <img src="images/image-2.jpg" alt="Celosia and amaranth texture mix">
+            </div>
+
+            
+
+            <!-- Slide 5-8 - Images -->
+            <div class="mySlides" data-caption="Black-Eyed Susans for sunshine">
+                <div class="numbertext">5 / 8</div>
+                <img src="images/image-3.jpg" alt="Black-Eyed Susans for sunshine">
+            </div>
+
+            <div class="mySlides" data-caption="Ageratum adds a soft touch">
+                <div class="numbertext">6 / 8</div>
+                <img src="images/image-4.jpg" alt="Ageratum adds a soft touch">
+            </div>
+
+            <div class="mySlides" data-caption="Cosmos for whimsy">
+                <div class="numbertext">7 / 8</div>
+                <img src="images/image-5.jpg" alt="Cosmos for whimsy">
+            </div>
+
+            <div class="mySlides" data-caption="Late-summer bouquet, ready to go">
+                <div class="numbertext">8 / 8</div>
+                <img src="images/image-6.jpg" alt="Late-summer bouquet, ready to go">
+            </div>
+
+            <!-- Nav -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
 
         </section>
     </main>
