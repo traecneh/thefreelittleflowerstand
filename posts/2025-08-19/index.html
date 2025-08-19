@@ -7,9 +7,9 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-3P7G1DS90P');
     </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>August 19, 2025 - Bouquets, Not Arrangements!</title>
@@ -20,12 +20,17 @@
     <meta property="og:description" content="This week we’re doing something a little different — bouquets instead of arrangements!  Being the novice, baby flower farmer that I am, I JUST learned the difference between an arrangement and a bouquet. Turns out, I’ve been making arrangements this whole time! 😅  The garden is shifting seasons — some of our early spring favorites are saying goodbye, while new late-summer beauties are stepping in. Today’s bouquets are leaning into those end-of-summer, early fall vibes with:  Celosia, Amaranth, Zinnia, Floss Flower (Ageratum), Salvia.  And of course, plenty of cheerful Black-Eyed Susans to brighten things up, plus some whimsical cosmos to keep it playful.  Stop by and grab a bouquet to bring a little sunshine home!">
     <meta property="og:url" content="https://traecneh.github.io/thefreelittleflowerstand/posts/2025-08-19/index.html">
     <meta property="og:type" content="article">
+
     <style>
-        video {
-        max-width: 100%;
-        height: auto;
-        margin: 1rem 0;
-        display: block;
+        /* Ensure videos behave like images */
+        .mySlides img,
+        .mySlides video,
+        video.slide-media {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-width: 100%;
+            object-fit: contain; /* or 'cover' if you want cropping */
         }
     </style>
 </head>
@@ -57,13 +62,14 @@
             <p>Stop by and grab a bouquet to bring a little sunshine home!</p>
             <p>- The Free Little Flower Stand</p>
             
-            <video controls>
+            <!-- First Video -->
+            <video controls playsinline class="slide-media">
                 <source src="videos/video-1.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
 
             <!-- Second Video -->
-            <video controls>
+            <video controls playsinline class="slide-media">
                 <source src="videos/video-2.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -72,32 +78,30 @@
             <div class="container">
 
                 <!-- Full-width images with number text -->
-             
                 <div class="mySlides">
                     <div class="numbertext">1 / 6</div>
-                    <img src="images/image-1.jpg" alt="Image of Flowers" style="width:100%">
+                    <img src="images/image-1.jpg" alt="Image of Flowers">
                 </div>
                 <div class="mySlides">
                     <div class="numbertext">2 / 6</div>
-                    <img src="images/image-2.jpg" alt="Image of Flowers" style="width:100%">
+                    <img src="images/image-2.jpg" alt="Image of Flowers">
                 </div>
                 <div class="mySlides">
                     <div class="numbertext">3 / 6</div>
-                    <img src="images/image-3.jpg" alt="Image of Flowers" style="width:100%">
+                    <img src="images/image-3.jpg" alt="Image of Flowers">
                 </div>
                 <div class="mySlides">
                     <div class="numbertext">4 / 6</div>
-                    <img src="images/image-4.jpg" alt="Image of Flowers" style="width:100%">
+                    <img src="images/image-4.jpg" alt="Image of Flowers">
                 </div>
                 <div class="mySlides">
                     <div class="numbertext">5 / 6</div>
-                    <img src="images/image-5.jpg" alt="Image of Flowers" style="width:100%">
+                    <img src="images/image-5.jpg" alt="Image of Flowers">
                 </div>
                 <div class="mySlides">
                     <div class="numbertext">6 / 6</div>
-                    <img src="images/image-6.jpg" alt="Image of Flowers" style="width:100%">
+                    <img src="images/image-6.jpg" alt="Image of Flowers">
                 </div>
-
 
                 <!-- Next and previous buttons -->
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
