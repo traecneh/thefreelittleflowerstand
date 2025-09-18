@@ -1,5 +1,23 @@
 [
     {
+        "title": "Bloom Along the Way",
+        "date": "September 18, 2025",
+        "comparedate": "2025-09-18",
+        "content": "Whether you’re just pausing to look or already carrying a vase back to your car, thank you for stopping by The Free Little Flower Stand. Today’s flowers are here for anyone who could use a lift — to brighten a table, cheer up a friend, or simply make the ride home a little lighter. Take one if you’d like, or just let their colors add a smile to your day. Either way, we’re grateful you’re here.",
+        "images": [
+            "posts/2025-09-18/images/image-1.jpg",
+            "posts/2025-09-18/images/image-2.jpg",
+            "posts/2025-09-18/images/image-3.jpg",
+            "posts/2025-09-18/images/image-4.jpg",
+            "posts/2025-09-18/images/image-5.jpg",
+            "posts/2025-09-18/images/image-6.jpg",
+            "posts/2025-09-18/images/image-7.jpg",
+            "posts/2025-09-18/images/image-8.jpg"
+        ],
+        "videos": [],
+        "link": "posts/2025-09-18/index.html"
+    },
+    {
         "title": "Morning Encore!",
         "date": "August 25, 2025",
         "comparedate": "2025-08-25",
