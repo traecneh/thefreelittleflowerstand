@@ -460,6 +460,26 @@ footer {
   gap: 8px;
 }
 
+.about-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 12px 0 24px;
+}
+
+.about-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.about-social-link svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  flex: 0 0 auto;
+}
+
 .social-icons svg {
   width: 1em;
   height: 1em;
