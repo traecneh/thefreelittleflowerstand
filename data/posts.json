@@ -6,16 +6,9 @@
         "content": "Whether you’re just pausing to look or already carrying a vase back to your car, thank you for stopping by The Free Little Flower Stand. Today’s flowers are here for anyone who could use a lift — to brighten a table, cheer up a friend, or simply make the ride home a little lighter. Take one if you’d like, or just let their colors add a smile to your day. Either way, we’re grateful you’re here.",
         "images": [
             "posts/2025-09-18/images/image-1.jpg",
-            "posts/2025-09-18/images/image-2.jpg",
-            "posts/2025-09-18/images/image-3.jpg",
-            "posts/2025-09-18/images/image-4.jpg",
-            "posts/2025-09-18/images/image-5.jpg",
-            "posts/2025-09-18/images/image-6.jpg",
-            "posts/2025-09-18/images/image-7.jpg",
-            "posts/2025-09-18/images/image-8.jpg"
+            "posts/2025-09-18/images/image-2.jpg"
         ],
-        "videos": [],
-        "link": "posts/2025-09-18/index.html"
+        "videos": []
     },
     {
         "title": "Morning Encore!",
@@ -32,8 +25,7 @@
             "posts/2025-08-25/images/image-7.jpg",
             "posts/2025-08-25/images/image-8.jpg"
         ],
-        "videos": [],
-        "link": "posts/2025-08-25/index.html"
+        "videos": []
     },
     {
         "title": "Friendship in Full Bloom",
@@ -50,8 +42,7 @@
             "posts/2025-08-24/images/image-7.jpg",
             "posts/2025-08-24/images/image-8.jpg"
         ],
-        "videos": [],
-        "link": "posts/2025-08-24/index.html"
+        "videos": []
     },
     {
         "title": "Bouquets, Not Arrangements!",
@@ -64,14 +55,12 @@
             "posts/2025-08-19/images/image-3.jpg",
             "posts/2025-08-19/images/image-4.jpg",
             "posts/2025-08-19/images/image-5.jpg",
-            "posts/2025-08-19/images/image-6.jpg",
-            "posts/2025-08-19/images/image-7.jpg"       
+            "posts/2025-08-19/images/image-6.jpg"
         ],
         "videos": [
             "posts/2025-08-19/videos/video-1.mp4",
             "posts/2025-08-19/videos/video-2.mp4"
-        ],
-        "link": "posts/2025-08-19/index.html"
+        ]
     },
     {
         "title": "Weathered, but Wonderful",
@@ -89,8 +78,7 @@
             "posts/2025-08-13/images/image-8.jpg",
             "posts/2025-08-13/images/image-9.jpg"           
         ],
-        "videos": [],
-        "link": "posts/2025-08-13/index.html"
+        "videos": []
     },
     {
         "title": "Pop‑Up Bloom Alert!",
@@ -108,8 +96,7 @@
             "posts/2025-07-20/images/image-8.jpg",
             "posts/2025-07-20/images/image-9.jpg"
         ],
-        "videos": [],
-        "link": "posts/2025-07-20/index.html"
+        "videos": []
     },
     {
         "title": "Fresh‑Picked Joy Drop!",
@@ -123,8 +110,7 @@
             "posts/2025-07-15/images/image-4.jpg",
             "posts/2025-07-15/images/image-5.jpg"
         ],
-        "videos": [],
-        "link": "posts/2025-07-15/index.html"
+        "videos": []
     },
     {
         "title": "Season’s First Bloom",
@@ -136,8 +122,7 @@
             "posts/2025-06-29/images/image-2.jpg",
             "posts/2025-06-29/images/image-3.jpg"
         ],
-        "videos": [],
-        "link": "posts/2025-06-29/index.html"
+        "videos": []
     },
     {
         "title": "The Beauty in the Broken",
@@ -150,8 +135,7 @@
             "posts/2024-09-08/images/image-3.jpg",
             "posts/2024-09-08/images/image-4.jpg"
         ],
-        "videos": [],
-        "link": "posts/2024-09-08/index.html"
+        "videos": []
     },
     {
         "title": "A Blooming Surprise Awaits!",
@@ -167,8 +151,7 @@
             "posts/2024-09-07/images/image-6.jpg",
             "posts/2024-09-07/images/image-7.jpg"
         ],
-        "videos": [],
-        "link": "posts/2024-09-07/index.html"
+        "videos": []
     },
     {
         "title": "Our First Bloom: A New Chapter Begins",
@@ -182,7 +165,6 @@
             "posts/2024-08-25/images/bouquet-4.jpg",
             "posts/2024-08-25/images/bouquet-5.jpg"
         ],
-        "videos": [],
-        "link": "posts/2024-08-25/index.html"
+        "videos": []
     }    
 ]

@@ -4,12 +4,11 @@ This repository contains the source for **The Free Little Flower Stand**, a smal
 
 ## Project Structure
 
-- `index.html` – Home page that lists blog posts from `data/posts.json` and automatically redirects to today's post if available.
-- `about.html` – Information about the family behind the flower stand.
-- `donate.html` – Instructions on how to donate jars, vases or flowers.
-- `data/posts.json` – Metadata for each blog post, including its title, date, content, and associated images/videos.
-- `posts/` – Contains a subfolder for each post (e.g. `2024-09-08`). Each folder holds an `index.html` and its related media.
-- `css/`, `js/`, `images/` and `assets/` – Supporting stylesheets, scripts, and images.
+- `index.html` - Single-page site that lists posts and renders post details from `data/posts.json` (it can auto-open today's post if available).
+- `data/posts.json` - Source of truth for each post: title, date, comparedate, content, and associated images/videos.
+- `posts/` - Contains a subfolder for each post (e.g. `2024-09-08`) holding that post's media (images/videos).
+- `about.html`, `donate.html`, and `posts/*/index.html` - Optional legacy pages (you can keep them as redirects to the SPA).
+- `css/`, `js/`, `images/` and `assets/` - Supporting stylesheets, scripts, and images.
 
 ## Running Locally
 
@@ -24,8 +23,8 @@ Then open `http://localhost:8000` in your browser.
 ## Adding a New Post
 
 1. Create a new folder under `posts/` named with the post's date (e.g. `2024-10-01`).
-2. Add an `index.html` file and any related images or videos in that folder.
-3. Update `data/posts.json` with an entry describing the new post, ensuring the `link` field points to the new HTML file.
+2. Add any related images or videos in that folder.
+3. Update `data/posts.json` with an entry describing the new post. Use `comparedate` as the post ID and deep-link format (`index.html#post=YYYY-MM-DD`).
 
 ## Contributing
 

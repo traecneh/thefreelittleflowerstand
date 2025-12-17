@@ -1,73 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3P7G1DS90P"></script>
-    <script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3P7G1DS90P"></script>
+  <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-3P7G1DS90P');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - The Free Little Flower Stand</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A small community site dedicated to sharing free flowers.">
+  <title>The Free Little Flower Stand</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <img src="assets/images/logo.png" alt="The Free Little Flower Stand" class="header-image">
-        <nav>
-            <ul>
-                <li><a href="index.html?noredirect=true">Home</a></li>
-                <li><a href="donate.html">Donate</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>       
-    </header>
+  <header>
+    <img src="assets/images/logo.png" alt="The Free Little Flower Stand" class="header-image">
+    <nav class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#home" id="nav-home" class="site-nav-link">Home</a></li>
+        <li><a href="#donate" id="nav-donate" class="site-nav-link">Donate</a></li>
+        <li><a href="#about" id="nav-about" class="site-nav-link">About</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <section id="arrangements">
-            <!-- All posts will be loaded here by JavaScript -->
-        </section>
-    </main>
+  <main>
+    <h1 class="visually-hidden">The Free Little Flower Stand</h1>
 
-    <footer>
-        <p>&copy; 2025 The Free Little Flower Stand</p>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/share/mmZMuZiQg1eXEo17/?mibextid=qi2Omg" target="_blank">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://www.instagram.com/thefreelittleflowerstand?igsh=bmlhbWM4M2I4cHlm" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
+    <section id="home" class="view">
+      <section id="arrangements" aria-label="Posts">
+        <!-- Posts are loaded here by JavaScript -->
+      </section>
+    </section>
+
+    <section id="post" class="view" hidden>
+      <nav class="post-nav" aria-label="Post navigation">
+        <a class="post-nav-link post-nav-home" href="#home">&larr; All posts</a>
+        <div class="post-nav-links">
+          <a id="post-newer" class="post-nav-link" href="#home" hidden>&larr; Newer</a>
+          <a id="post-older" class="post-nav-link" href="#home" hidden>Older &rarr;</a>
         </div>
-    </footer>
+      </nav>
+      <article id="post-detail" class="post-detail"></article>
+    </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-        const queryParams = new URLSearchParams(window.location.search);
-        const noRedirect = queryParams.has('noredirect');
+    <section id="donate" class="view" hidden>
+      <h2>How to Donate</h2>
+      <p>
+        At The Free Little Flower Stand, every flower, vase, and jar has a story, and we invite you to be a part of ours.
+        Your donations of glass jars, vases, and flowers help us keep the stand stocked and continue spreading joy in our
+        community, one bouquet at a time.
+      </p>
+      <ol class="donate-steps">
+        <li>
+          <div class="donate-step-content">
+            <strong>Message us on Facebook.</strong>
+            Let us know what you’d like to donate.
+          </div>
+        </li>
+        <li>
+          <div class="donate-step-content">
+            <strong>Coordinate a drop-off.</strong>
+            We’ll reply with the easiest way to get it to us.
+          </div>
+        </li>
+        <li>
+          <div class="donate-step-content">
+            <strong>Donate and brighten someone’s day.</strong>
+            We’ll put your items to work in the stand as soon as we can.
+          </div>
+        </li>
+      </ol>
+      <p>Thank you for your kindness and for being a part of our journey to make the world a little brighter.</p>
+      <p>
+        <a
+          class="post-nav-link donate-cta"
+          href="https://www.facebook.com/people/The-Free-Little-Flower-Stand/61564854178648/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Message us on Facebook
+        </a>
+      </p>
+    </section>
 
-        if (!noRedirect) {
-            const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
+    <section id="about" class="view" hidden>
+      <h2>About</h2>
+      <p>
+        The Free Little Flower Stand is a small, family-run project built on a simple idea: free flowers for anyone who
+        needs a smile.
+      </p>
+      <p>
+        This whole adventure started when Alyssa, who once doubted her flower-arranging and selling skills, realized
+        that giving them away for free made everything bloom even brighter. With Barry's full support (and muscle power
+        for carrying those heavy vases), we've turned this into a joy-spreading little routine.
+      </p>
+      <p>
+        Our toddler is the chief flower inspector, always ready to lend a hand (or two tiny ones). Our baby might not
+        be able to handle the shears just yet, but he’s already mastered the art of posing for the camera.
+      </p>
+      <p>
+        We believe a simple act of kindness can make the world a little brighter. Whether you're receiving a bouquet,
+        seeing the photos online, or just smiling as you drive by, we hope it adds a bit of light to your day.
+      </p>
+      <p>
+        Want to follow along? Find us on
+        <a
+          href="https://www.facebook.com/people/The-Free-Little-Flower-Stand/61564854178648/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Facebook
+        </a>
+        and
+        <a
+          href="https://www.instagram.com/thefreelittleflowerstand?igsh=bmlhbWM4M2I4cHlm"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+        for updates and new arrangements.
+      </p>
+      <p>Thank you for being a part of our journey and for sharing in the joy.</p>
+      <img id="about-image" class="about-image" alt="About Us" loading="lazy" decoding="async">
+    </section>
+  </main>
 
-            fetch('data/posts.json')
-                .then(response => response.json())
-                .then(posts => {
-                    const todayPost = posts.find(post => post.comparedate === today);
-                    if (todayPost) {
-                        window.location.href = `${todayPost.link}?noredirect=true`; // Redirect to today's post with a parameter to avoid redirect loop
-                    }
-                })
-                .catch(error => console.error('Error checking today\'s post:', error));
-        }
-    });
+  <footer>
+    <p>&copy; 2025 The Free Little Flower Stand</p>
+    <div class="social-icons">
+      <a
+        href="https://www.facebook.com/people/The-Free-Little-Flower-Stand/61564854178648/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Facebook (opens in a new tab)"
+      >
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <path
+            d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2.2V12h2.2V9.8c0-2.2 1.3-3.4 3.3-3.4.96 0 1.96.17 1.96.17v2.2h-1.1c-1.1 0-1.45.68-1.45 1.38V12h2.46l-.39 2.9h-2.07v7A10 10 0 0 0 22 12z"
+          ></path>
+        </svg>
+      </a>
+      <a
+        href="https://www.instagram.com/thefreelittleflowerstand?igsh=bmlhbWM4M2I4cHlm"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram (opens in a new tab)"
+      >
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <path
+            d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.25-2.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"
+          ></path>
+        </svg>
+      </a>
+    </div>
+  </footer>
 
-    </script>
-
-    <script src="js/posts.js"></script>
+  <script src="js/posts.js" defer></script>
 </body>
 </html>
